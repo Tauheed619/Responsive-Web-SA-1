@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,27 +12,20 @@ body {
     line-height: 1.6;
 }
 
-/* Centered content container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* Header */
-.header {
-    background-color: white;
-    padding: 12px; /* Small mobile default */
-}
-
 .header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
 }
 
 .logo {
     width: 80px;
+    height: auto;
 }
 
 .nav ul {
@@ -47,22 +40,21 @@ body {
     font-weight: bold;
 }
 
-/* Main Content Box */
+/* Main Content */
 .main {
+    max-width: 900px;
+    margin: 20px auto;
     background-color: white;
-    margin: 12px auto;
     padding: 12px;
     border-radius: 8px;
 }
 
-/* Blog Title */
 .title {
     font-family: 'Protest Guerrilla', cursive;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-/* Author Info */
 .author {
     display: flex;
     align-items: center;
@@ -75,23 +67,28 @@ body {
     border-radius: 50%;
 }
 
-.author-name {
-    font-size: 1rem;
-}
-
-/* Blog Content */
 .blog-content p {
     margin-bottom: 20px;
 }
 
 .blog-content .intro {
-    font-size: 1.2rem; /* larger first paragraph */
+    font-size: 1.2rem;
 }
 
 .blog-content h2 {
     margin-top: 30px;
     margin-bottom: 15px;
     font-family: 'Protest Guerrilla', cursive;
+}
+
+/* Blog images */
+.blog-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
 }
 
 /* Footer */
@@ -104,10 +101,8 @@ body {
 }
 
 /* Responsive Breakpoints */
-
-/* Large Mobile >= 540px */
 @media (min-width: 540px) {
-    .header, .main {
+    .header-container, .main {
         padding: 20px;
     }
     .nav ul {
@@ -115,18 +110,13 @@ body {
     }
 }
 
-/* Tablet >= 720px */
 @media (min-width: 720px) {
-    .header, .main {
+    .header-container, .main {
         padding: 30px;
     }
 }
 
-/* Desktop >= 1024px */
 @media (min-width: 1024px) {
-    .header, .main {
-        padding: 50px;
-    }
     .logo {
         width: 200px;
     }
@@ -135,6 +125,9 @@ body {
     }
     .blog-content .intro {
         font-size: 1.5rem;
+    }
+    .header-container, .main {
+        padding: 50px;
     }
 }
 
