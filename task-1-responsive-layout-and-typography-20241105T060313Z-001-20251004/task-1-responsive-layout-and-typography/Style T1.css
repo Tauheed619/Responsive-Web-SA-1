@@ -12,6 +12,7 @@ body {
     line-height: 1.6;
 }
 
+/* Centered content container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -21,7 +22,7 @@ body {
 /* Header */
 .header {
     background-color: white;
-    padding: 20px 0;
+    padding: 12px; /* Small mobile default */
 }
 
 .header-container {
@@ -37,7 +38,7 @@ body {
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .nav a {
@@ -46,23 +47,26 @@ body {
     font-weight: bold;
 }
 
-/* Main Content */
+/* Main Content Box */
 .main {
     background-color: white;
-    padding: 20px;
-    margin: 20px 0;
+    margin: 12px auto;
+    padding: 12px;
+    border-radius: 8px;
 }
 
+/* Blog Title */
 .title {
     font-family: 'Protest Guerrilla', cursive;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
+/* Author Info */
 .author {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     margin-bottom: 20px;
 }
 
@@ -75,18 +79,19 @@ body {
     font-size: 1rem;
 }
 
+/* Blog Content */
 .blog-content p {
     margin-bottom: 20px;
 }
 
 .blog-content .intro {
-    font-size: 1.2rem; /* Larger first paragraph */
+    font-size: 1.2rem; /* larger first paragraph */
 }
 
-.blog-image {
-    width: 100%;
-    margin: 20px 0;
-    border-radius: 5px;
+.blog-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: 'Protest Guerrilla', cursive;
 }
 
 /* Footer */
@@ -95,6 +100,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: 20px;
 }
 
 /* Responsive Breakpoints */
@@ -104,11 +110,8 @@ body {
     .header, .main {
         padding: 20px;
     }
-    .logo {
-        width: 80px;
-    }
-    .container {
-        width: 95%;
+    .nav ul {
+        gap: 20px;
     }
 }
 
@@ -116,12 +119,6 @@ body {
 @media (min-width: 720px) {
     .header, .main {
         padding: 30px;
-    }
-    .logo {
-        width: 80px;
-    }
-    .container {
-        width: 90%;
     }
 }
 
@@ -140,3 +137,4 @@ body {
         font-size: 1.5rem;
     }
 }
+
